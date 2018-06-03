@@ -11,12 +11,12 @@ var webpack = require('webpack-stream');
 var webpackConfig = require('./webpack.config.js');
 
 gulp.task('webpack', function() {
-    return gulp.src('./src/app/app.js')
-        .pipe(plumber())
-        .pipe(webpack(webpackConfig), null, function(err, stats) {
-            console.log(stats);
-        })
-        .pipe(gulp.dest('./www'))
+  return gulp.src('./src/app/app.js')
+      .pipe(plumber())
+      .pipe(webpack(webpackConfig), null, function(err, stats) {
+        console.log(stats);
+      })
+      .pipe(gulp.dest('./www'))
 });
 
 // copies our `src/assets` folder into `www`
@@ -35,20 +35,22 @@ gulp.task('scss', function() {
         .pipe(gulp.dest('./www'))
 });
 
-gulp.task('tdd', function(cb) {
-    var server = new karma.Server({
+gulp.task('tdd', function(done) {
+    new karma.Server({
         configFile: __dirname + '/karma.conf.js',
         singleRun: false
-    }, cb);
-    server.start()
+    }, function() {
+      done();
+    }).start();
 });
 
-gulp.task('test', function(cb) {
-    var server = new karma.Server({
+gulp.task('test', function (done) {
+    new karma.Server({
         configFile: __dirname + '/karma.conf.js',
         singleRun: true
-    }, cb);
-    server.start()
+    }, function() {
+      done();
+    }).start();
 });
 
 // we just need a watch for scss. webpack watches everything else.
@@ -60,4 +62,5 @@ gulp.task('watch', function() {
 // @TODO
 // production build
 
-gulp.task('default', ['webpack', 'copy-assets', 'watch']);
+gulp.task('default', ['webpack', 'copy-assets', 'watch', 'scss']);
+gulp.task('build', ['webpack', 'copy-assets', 'scss']);

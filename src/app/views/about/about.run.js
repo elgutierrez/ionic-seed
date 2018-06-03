@@ -1,3 +1,3 @@
-const AboutRun = () => {};
+const AboutRun = () => {}
 
-export default AboutRun;
+export default AboutRun

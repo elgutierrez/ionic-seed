@@ -1,15 +1,15 @@
-import appTemplate from './app.html';
+import appTemplate from './app.html'
 
-/*@ngInject*/
+/* @ngInject */
 const AppConfig = ($stateProvider, $urlRouterProvider) => {
   $stateProvider.state('home', {
-      url: '/',
-      template: appTemplate,
-      controller: 'AppController',
-      controllerAs: 'app'
-  });
+    url: '/',
+    template: appTemplate,
+    controller: 'AppController',
+    controllerAs: 'app'
+  })
 
-  $urlRouterProvider.otherwise('/');
-};
+  $urlRouterProvider.otherwise('/')
+}
 
-export default AppConfig;
+export default AppConfig

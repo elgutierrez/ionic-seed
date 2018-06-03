@@ -1,0 +1,21 @@
+{
+  "name": "ionicSeed",
+  "type": "ionic1",
+  "gulpStartupTasks": [
+    "webpack",
+    "copy-assets",
+    "scss",
+    "watch"
+  ],
+  "app_id": "",
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

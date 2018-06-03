@@ -6,7 +6,7 @@ module.exports = {
     watch: true,
 
     eslint: {
-        configFile: '.eslintrc'
+        configFile: '.eslintrc.js'
     },
 
     entry: [
@@ -28,7 +28,7 @@ module.exports = {
                 path.resolve(__dirname, 'src')
             ],
             exclude: /node_modules/,
-            loaders: ['ng-annotate', 'babel-loader']
+            loaders: ['ng-annotate', 'babel-loader', 'eslint-loader']
         }, {
             test: /\.js$/,
             include: [
