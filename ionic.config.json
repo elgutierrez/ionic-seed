@@ -1,5 +1,9 @@
 {
   "name": "ionicSeed",
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  },
   "type": "ionic1",
   "gulpStartupTasks": [
     "webpack",
@@ -7,11 +11,6 @@
     "scss",
     "watch"
   ],
-  "app_id": "",
-  "integrations": {
-    "gulp": {},
-    "cordova": {}
-  },
   "watchPatterns": [
     "scss/**/*",
     "www/**/*",

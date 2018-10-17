@@ -2,8 +2,8 @@ import 'angular/angular'
 import 'angular-animate/angular-animate'
 import 'angular-sanitize/angular-sanitize'
 import 'angular-ui-router/release/angular-ui-router'
-import 'ionic-angular/release/js/ionic'
-import 'ionic-angular/release/js/ionic-angular'
+import 'ionic-angular/js/ionic'
+import 'ionic-angular/js/ionic-angular'
 
 // import ngCordova
 import 'ng-cordova'

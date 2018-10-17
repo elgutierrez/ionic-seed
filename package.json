@@ -21,6 +21,7 @@
     "ng-cordova": "^0.1.23-alpha"
   },
   "devDependencies": {
+    "@ionic/v1-toolkit": "1.0.10",
     "angular-mocks": "1.5.3",
     "babel-core": "^6.3.17",
     "babel-eslint": "^8.2.3",

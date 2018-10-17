@@ -25,7 +25,7 @@ $dark: #263238;
 $positive: #2196F3;
 
 // include all of Ionic
-@import "../../node_modules/ionic-angular/scss/ionic";
+@import "../../node_modules/ionic-angular/css/ionic";
 
 // include your custom component SCSS modules
 @import '../app/views/about/about.scss';
